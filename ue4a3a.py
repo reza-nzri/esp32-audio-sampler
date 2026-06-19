@@ -42,7 +42,7 @@ class Sampler():
         # Alle Samples nacheinander ausgeben
         for duty in Sampler.samples:
             
-            # D/A-Wandlung über PWM
+            # D/A-Wandlung conversation über PWM
             self.pwm(duty)
             
             # Bis zum nächsten Timer-Aufruf warten
@@ -77,11 +77,10 @@ class Sampler():
         
          
 if __name__ == "__main__":
-    
-    # Abtastfrequenz
+    # Abtastfrequenz, sample freq
     fs = 4000
     
-    # Aufnahmedauer (hier noch nicht benutzt)
+    # Aufnahmedauer (hier noch nicht benutzt) | record time in sec
     T = 4
     
     # Sampler erzeugen
