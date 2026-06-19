@@ -1,5 +1,26 @@
 # Übungsblatt 4 - Aufgabe 2 g)
-# Erzeugt ein PWM-Signal mit 100 kHz und einstellbarem Tastverhältnis (Duty-Cycle).
+
+'''
+PWM (Pulse Width Modulation) zu verstehen
+Erzeugt auf dem ESP32 ein PWM-Signal mit 100 kHz und einstellbarem Duty Cycle als Grundlage für eine D/A-Wandlung
+
+1. ESP32 wird gestartet.
+2. Auf GPIO0 wird ein 100-kHz-PWM-Signal erzeugt.
+3. Der Benutzer kann das Tastverhältnis (0–65535) festlegen.
+4. Dadurch kann später z. B. über einen Tiefpass eine analoge Spannung bzw. ein Audiosignal erzeugt werden.
+
+PWM:
+Der ESP32 schaltet einen Pin sehr schnell zwischen AN und AUS.
+Hier: 100.000 Mal pro Sekunde (100 kHz).
+
+mit PWM und einem Tiefpass kann man einen einfachen DAC (Digital-Analog-Converter) nachbilden.
+dies ist die Grundlage für spätere Audioausgabe und Signalverarbeitung
+
+0 % Duty → immer AUS → 0 V.
+50 % Duty → halb AN, halb AUS → etwa halbe Spannung.
+100 % Duty → immer AN → maximale Spannung.
+'''
+
 
 import machine
 import time
@@ -42,7 +63,7 @@ if __name__ == "__main__":
     # Objekt erzeugen
     sampler = Sampler()
 
-    # 25 % Tastverhältnis
+    # 25 % Tastverhältnis einstellen
     sampler.pwm(16384)
 
     print("PWM gestartet.")
