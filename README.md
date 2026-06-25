@@ -2,7 +2,19 @@
 
 ESP32 audio sampling and playback using MicroPython, PWM, and ADC.
 
-## Setup
+**Was das Projekt macht:**
+
+- Ü4: PWM auf dem ESP32 verstehen, PWM als einfachen DAC nutzen, Sinustöne erzeugen und über PWM ausgeben. Das passt zu Übung 4: PWM-Generator, D/A-Wandlung und `convDA`.
+
+- Ü5: Mikrofon über ADC aufnehmen und die Samples danach wieder über PWM abspielen. Das passt zu Übung 5: `convAD`, `startAD`, Aufnahmezeit `T` und Wiedergabe.
+
+- Ü6: Sprachproben aufnehmen, in `samples.csv` speichern, mit Notebook plotten und Wortgrenzen/SNR untersuchen. Das passt zu Übung 6.
+
+- `samples.csv` sollte für echte Abgabe mindestens **10 echte Sprachproben** enthalten, nicht nur Dummy-Daten.
+
+<details>
+
+<summary><h2>Setup</h2></summary>
 
 ### 1. Repository klonen
 
@@ -42,3 +54,5 @@ Danach die `requirements.txt` aktualisieren:
 ```bash
 uv pip freeze > requirements.txt
 ```
+
+</details>
