@@ -1,5 +1,23 @@
-# Übungsblatt 4 - Aufgabe 3 a)
-# Gibt digitale Samples über PWM als analoges Signal aus.
+# Übungsblatt 4 - Aufgabe 3 b)
+
+'''
+Versteht die D/A-Wandlung (Digital-Analog-Wandlung) mit PWM.
+
+Gibt digitale Sinus-Samples über PWM als analoges Signal aus.
+
+1. Erzeugt digitale Sinus-Samples.
+2. Gibt die Samples nacheinander über den PWM-Ausgang aus.
+3. Der Timer sorgt dafür, dass jedes Sample mit der richtigen Abtastfrequenz ausgegeben wird.
+4. Dadurch entsteht nach einem Tiefpass ein analoges Signal.
+
+Testfrequenzen:
+- 100 Hz
+- 440 Hz
+- 1000 Hz
+
+Dies ist die Grundlage für die spätere Audioausgabe und Signalverarbeitung.
+'''
+
 
 import machine                         # ESP32-Funktionen
 import time                            # Zeitfunktionen
